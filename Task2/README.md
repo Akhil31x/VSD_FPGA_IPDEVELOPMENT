@@ -1,4 +1,4 @@
-# Task-2: Simple GPIO Output IP
+# Task-2: GPIO Output IP
 
 ## Address and CPU Access
 - Example base address: 0x2000_0000
