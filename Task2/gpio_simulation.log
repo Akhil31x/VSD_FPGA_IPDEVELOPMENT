@@ -1,0 +1,5 @@
+=== GPIO IP TEST START ===
+TEST1: read_data=12345678 gpio_out=12345678
+TEST2: read_data=deadbeef gpio_out=deadbeef
+=== GPIO IP TEST END ===
+gpio_tb.v:64: $finish called at 120000 (1ps)
