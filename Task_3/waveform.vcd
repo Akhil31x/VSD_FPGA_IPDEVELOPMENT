@@ -1,0 +1,267 @@
+$date
+	Wed Dec 31 22:58:15 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module gpio_multi_tb $end
+$var wire 32 ! read_data [31:0] $end
+$var wire 32 " gpio_io [31:0] $end
+$var reg 2 # addr [1:0] $end
+$var reg 1 $ chip_select $end
+$var reg 1 % clk $end
+$var reg 32 & external_inputs [31:0] $end
+$var reg 1 ' read_enable $end
+$var reg 1 ( rst $end
+$var reg 32 ) write_data [31:0] $end
+$var reg 1 * write_enable $end
+$scope module dut $end
+$var wire 2 + addr [1:0] $end
+$var wire 1 $ chip_select $end
+$var wire 1 % clk $end
+$var wire 1 ' read_enable $end
+$var wire 1 ( rst $end
+$var wire 32 , write_data [31:0] $end
+$var wire 1 * write_enable $end
+$var wire 32 - gpio_io [31:0] $end
+$var reg 32 . gpio_data_reg [31:0] $end
+$var reg 32 / gpio_dir_reg [31:0] $end
+$var reg 32 0 gpio_read_reg [31:0] $end
+$var reg 32 1 read_data [31:0] $end
+$scope begin gpio_gen[0] $end
+$var parameter 2 2 i $end
+$upscope $end
+$scope begin gpio_gen[1] $end
+$var parameter 2 3 i $end
+$upscope $end
+$scope begin gpio_gen[2] $end
+$var parameter 3 4 i $end
+$upscope $end
+$scope begin gpio_gen[3] $end
+$var parameter 3 5 i $end
+$upscope $end
+$scope begin gpio_gen[4] $end
+$var parameter 4 6 i $end
+$upscope $end
+$scope begin gpio_gen[5] $end
+$var parameter 4 7 i $end
+$upscope $end
+$scope begin gpio_gen[6] $end
+$var parameter 4 8 i $end
+$upscope $end
+$scope begin gpio_gen[7] $end
+$var parameter 4 9 i $end
+$upscope $end
+$scope begin gpio_gen[8] $end
+$var parameter 5 : i $end
+$upscope $end
+$scope begin gpio_gen[9] $end
+$var parameter 5 ; i $end
+$upscope $end
+$scope begin gpio_gen[10] $end
+$var parameter 5 < i $end
+$upscope $end
+$scope begin gpio_gen[11] $end
+$var parameter 5 = i $end
+$upscope $end
+$scope begin gpio_gen[12] $end
+$var parameter 5 > i $end
+$upscope $end
+$scope begin gpio_gen[13] $end
+$var parameter 5 ? i $end
+$upscope $end
+$scope begin gpio_gen[14] $end
+$var parameter 5 @ i $end
+$upscope $end
+$scope begin gpio_gen[15] $end
+$var parameter 5 A i $end
+$upscope $end
+$scope begin gpio_gen[16] $end
+$var parameter 6 B i $end
+$upscope $end
+$scope begin gpio_gen[17] $end
+$var parameter 6 C i $end
+$upscope $end
+$scope begin gpio_gen[18] $end
+$var parameter 6 D i $end
+$upscope $end
+$scope begin gpio_gen[19] $end
+$var parameter 6 E i $end
+$upscope $end
+$scope begin gpio_gen[20] $end
+$var parameter 6 F i $end
+$upscope $end
+$scope begin gpio_gen[21] $end
+$var parameter 6 G i $end
+$upscope $end
+$scope begin gpio_gen[22] $end
+$var parameter 6 H i $end
+$upscope $end
+$scope begin gpio_gen[23] $end
+$var parameter 6 I i $end
+$upscope $end
+$scope begin gpio_gen[24] $end
+$var parameter 6 J i $end
+$upscope $end
+$scope begin gpio_gen[25] $end
+$var parameter 6 K i $end
+$upscope $end
+$scope begin gpio_gen[26] $end
+$var parameter 6 L i $end
+$upscope $end
+$scope begin gpio_gen[27] $end
+$var parameter 6 M i $end
+$upscope $end
+$scope begin gpio_gen[28] $end
+$var parameter 6 N i $end
+$upscope $end
+$scope begin gpio_gen[29] $end
+$var parameter 6 O i $end
+$upscope $end
+$scope begin gpio_gen[30] $end
+$var parameter 6 P i $end
+$upscope $end
+$scope begin gpio_gen[31] $end
+$var parameter 6 Q i $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b11111 Q
+b11110 P
+b11101 O
+b11100 N
+b11011 M
+b11010 L
+b11001 K
+b11000 J
+b10111 I
+b10110 H
+b10101 G
+b10100 F
+b10011 E
+b10010 D
+b10001 C
+b10000 B
+b1111 A
+b1110 @
+b1101 ?
+b1100 >
+b1011 =
+b1010 <
+b1001 ;
+b1000 :
+b111 9
+b110 8
+b101 7
+b100 6
+b11 5
+b10 4
+b1 3
+b0 2
+$end
+#0
+$dumpvars
+b0 1
+bx 0
+bx /
+bx .
+bx -
+bx ,
+bx +
+0*
+bx )
+1(
+0'
+b11011110101011011011111011101111 &
+0%
+0$
+bx #
+bx "
+b0 !
+$end
+#5000
+b0 "
+b0 -
+b11111111111111111111111111111111 /
+b0 .
+b0 0
+1%
+#10000
+0%
+#15000
+1%
+#20000
+0%
+0(
+#25000
+1%
+#30000
+0%
+b1111111111111111 )
+b1111111111111111 ,
+1*
+b1 #
+b1 +
+1$
+#35000
+0*
+0$
+1%
+#40000
+0%
+#45000
+1%
+b10101010101010100101010101010101 )
+b10101010101010100101010101010101 ,
+0*
+b0 #
+b0 +
+0$
+#50000
+0%
+#55000
+1%
+#60000
+0%
+#65000
+1%
+1'
+b10 #
+b10 +
+1$
+#70000
+0%
+#75000
+1%
+#80000
+0%
+#85000
+1%
+0'
+0$
+#90000
+0%
+#95000
+1%
+#100000
+0%
+#105000
+1%
+#110000
+0%
+#115000
+1%
+#120000
+0%
+#125000
+1%
+#130000
+0%
+#135000
+1%
