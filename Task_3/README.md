@@ -228,7 +228,7 @@ Task3/
 
 ***
 
-## **8. HOW IT WORKS** (Evaluator Explanation)
+## **8. HOW IT WORKS**
 
 ### **Address Offset Decoding**
 
