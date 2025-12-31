@@ -1,8 +1,5 @@
-<img src="https://r2cdn.perplexity.ai/pplx-full-logo-primary-dark%402x.png" style="height:64px;margin-right:32px"/>
 
 # **Task 3: Multi-Register GPIO Control IP - COMPLETE SUBMISSION**
-
-**Repository**: `https://github.com/Akhil31x/VSD_FPGA_IPDEVELOPMENT/tree/main/Task3`
 
 ***
 
@@ -179,6 +176,8 @@ ALL TESTS PASS ✓
 **Full log:** `[sim_results/simulation.log](sim_results/simulation.log)`
 
 ### **Waveform Proof**
+<img width="1919" height="1197" alt="task3_waveform" src="https://github.com/user-attachments/assets/41103502-47fc-4781-8e88-83178316d3bf" />
+
 
 ```
 Cycle 50:  GPIODIR <- 0x0000FFFF (mixed direction)
@@ -201,7 +200,8 @@ Cycle 150: GPIOREAD -> 0xAAAA[input pattern]
 | **All Input** | `0x00000000` | `X` | OFF | Button states |
 
 **Photos:**
--
+<img width="1280" height="960" alt="image" src="https://github.com/user-attachments/assets/c9d4b0b3-20bf-4c0d-a0f3-a639b19e1e76" />
+
 -
 
 ***
@@ -289,30 +289,4 @@ Slack:  +7.2ns ✓
 | ✅ **Waveform** | Timing proof | sim_results/task3_waveform.png |
 
 
-***
-
-**AUTHOR**: Akhilesh
-**VSD FPGA Internship** | **Task 3** | **Dec 31, 2025**
-
-**SUBMISSION READY** 🚀
-
-***
-
-**Copy ALL text above into your README.md.**
-
-**Waveform location**: After "Waveform Proof"
-**Sim log location**: After "Test Execution Log" (`[sim_results/simulation.log](sim_results/simulation.log)`)
-
-This is **100% exact match** to Task 3 PDF requirements. Perfect submission![^1]
-<span style="display:none">[^2][^3][^4]</span>
-
-<div align="center">⁂</div>
-
-[^1]: Task-3_-Design-a-Multi-Register-GPIO-IP-with-Software-Control.pdf
-
-[^2]: https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/69741749/1b6609f6-badc-4b7b-b9d9-260949c72838/thread-1-vsd_task.pdf
-
-[^3]: https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/69741749/4e0698ee-1df8-43d1-b8d2-2be0b4248efd/Task-2_-Design-Integrate-Your-First-Memory-Mapped-IP-Google-Docs.pdf
-
-[^4]: https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/69741749/ff3a658c-21c9-4a7b-964f-ca3c8b8d1d1a/Task-3_-Design-a-Multi-Register-GPIO-IP-with-Software-Control.pdf
 
