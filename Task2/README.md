@@ -268,6 +268,6 @@ This submission exemplifies:
 1. **Advanced SoC bus protocol comprehension**
 2. **Production-grade RTL engineering discipline**
 
-The GPIO Output IP demonstrates:
+
 
 
