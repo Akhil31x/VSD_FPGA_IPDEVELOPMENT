@@ -1,5 +1,5 @@
 
-# **Task 3: Multi-Register GPIO Control IP - COMPLETE SUBMISSION**
+# **Task 3: Multi-Register GPIO Control IP**
 
 ***
 
