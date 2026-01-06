@@ -1,4 +1,4 @@
-# Task-4: Design and Validate a PWM Peripheral IP with Software Control
+# Task-4:  PWM Peripheral IP Development
 
 ## Overview
 
