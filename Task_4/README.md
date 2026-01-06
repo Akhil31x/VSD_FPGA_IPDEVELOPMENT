@@ -262,6 +262,7 @@ Using GTKWave, I verified:
 - Stable waveform transitions
 
 The waveform clearly shows the PWM output HIGH for the programmed DUTY duration and LOW for the remainder of the period.
+<img width="1920" height="870" alt="waveform" src="https://github.com/user-attachments/assets/cc29c5fc-fd35-45dd-9260-41c1ce279d4b" />
 
 ---
 
