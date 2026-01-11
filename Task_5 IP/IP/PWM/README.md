@@ -1,4 +1,4 @@
-# PWM MASTER IP – SINGLE CHANNEL
+# PWM IP - 
 
 ---
 
