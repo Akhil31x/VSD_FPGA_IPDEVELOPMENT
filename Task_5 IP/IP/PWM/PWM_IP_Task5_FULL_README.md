@@ -186,7 +186,26 @@ int main() {
 
 ---
 
+## 11. Validation Summary
+
+The PWM IP is validated through:
+
+- RTL simulation  
+- Waveform inspection  
+- Software-driven control  
+- FPGA hardware deployment  
+
+All stages confirm correct PWM functionality.
+
+---
+
 ## Conclusion
 
-This PWM IP provides a **simple, reusable, and software-friendly PWM solution** for the VSDSquadron RISC-V SoC.  
-It satisfies commercial-style IP documentation requirements and is suitable for educational and prototyping use cases.
+This project successfully implements a **PWM IP** with:
+
+- Clean register interface  
+- Deterministic counter-based design  
+- Software-controlled operation  
+- Complete simulation and hardware validation  
+
+The design demonstrates **production-style peripheral development**, suitable for integration into FPGA-based SoC systems.
