@@ -163,19 +163,112 @@ int main() {
 
 ---
 
-## 9. Validation & Expected Output
+## 9. Validation & Verification
 
-### Expected Behavior
-- PWM output toggles continuously  
-- Duty cycle matches `DUTY / PERIOD`  
-- LED brightness varies with duty cycle  
+### 9.1 Simulation Validation (GTKWave)
 
-### Common Failure Symptoms
-- LED always OFF → PWM not enabled  
-- LED always ON → DUTY >= PERIOD  
-- No output → pin not constrained correctly  
+The PWM IP was verified using a dedicated Verilog testbench and GTKWave waveform analysis. The simulation validates correct **memory-mapped register access**, **counter operation**, and **PWM waveform generation**.
 
 ---
+
+### 9.1.1 Register Write Verification
+
+The waveform confirms correct write transactions from the bus interface to the PWM registers.
+
+**Observed signals**
+- `bus_addr`
+- `bus_wdata`
+- `bus_we`
+
+**Observed behavior**
+- `bus_addr` selects valid PWM register offsets
+- `bus_we` asserts only during valid write cycles
+- `bus_wdata` carries the programmed values
+
+This confirms proper bus decoding and register write handling.
+
+---
+
+### 9.1.2 Internal Register Update Verification
+
+Internal PWM registers update correctly after bus writes.
+
+**Observed signals**
+- `period_reg`
+- `duty_reg`
+
+**Observed behavior**
+- `period_reg` loads the programmed period value
+- `duty_reg` updates to the programmed duty-cycle value
+- No unintended register modifications occur
+
+This validates correct offset handling and stable register storage.
+
+---
+
+### 9.1.3 PWM Signal Generation Verification
+
+PWM output generation is verified using waveform inspection.
+
+**Observed signals**
+- `cnt`
+- `pwm_out`
+
+**Observed behavior**
+- `cnt` increments from `0` to `PERIOD-1`
+- `cnt` resets cleanly at the period boundary
+- `pwm_out` is HIGH when `cnt < duty_reg`
+- `pwm_out` is LOW when `cnt ≥ duty_reg`
+
+The duty-cycle variation is clearly visible in the waveform, confirming correct PWM logic.
+
+---
+
+## 9.2 Hardware Validation 
+
+The SoC with the integrated PWM IP was synthesized and programmed on the **FPGA**.
+
+**Build and programming flow**
+- Yosys synthesis completed successfully
+- nextpnr placement and routing completed without errors
+- icetime timing analysis passed
+- icepack generated the FPGA bitstream
+- iceprog successfully flashed the FPGA
+
+The PWM output was routed to an on-board LED, demonstrating real hardware operation.
+
+---
+
+## 9.3 End-to-End System Integration Proof
+
+The complete software-to-hardware flow was validated:
+
+1. RISC-V firmware writes to `PWM_BASE + register_offset`
+2. SoC address decoder asserts `is_pwm`
+3. `pwm_we` is generated from the bus write mask
+4. PWM internal registers update correctly
+5. PWM counter runs based on programmed PERIOD
+6. PWM output reflects programmed DUTY cycle
+7. FPGA LED responds to PWM output
+
+This confirms full **end-to-end integration** from software to physical hardware.
+
+---
+
+## 9.4 Task-4 and Task-5 Compliance Summary
+
+This implementation fully satisfies the Task-4 and Task-5 requirements:
+
+- ✔ Enforced **4 KB memory-mapped address window**
+- ✔ Proper base address decoding using `mem_addr[31:12]`
+- ✔ Clean offset-based register access inside PWM IP
+- ✔ Verified RISC-V software-driven register writes
+- ✔ Correct PWM waveform generation
+- ✔ Simulation waveform evidence provided
+- ✔ FPGA hardware validation completed
+
+<img width="1914" height="1193" alt="Screenshot from 2026-02-14 00-22-46" src="https://github.com/user-attachments/assets/66c6a9b5-02b8-48df-a7fb-c48f2e34792b" />
+Waveform confirms the PWM 
 
 ## 10. Known Limitations & Notes
 
